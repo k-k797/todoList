@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="digitalclock.js" defer></script>
+    <script src="analogClock.js" defer></script>
+    <script src="todo.js" defer></script>
+    <title>TODO</title>
+</head>
+
+<body>
+    <div id="header-container">
+        <div id="title-container">
+            <h1>TODOリスト</h1>
+        </div>
+        <div id="clock-container">
+            <div id="analog-clock">
+                <div class="hand hour-hand"></div>
+                <div class="hand minute-hand"></div>
+                <div class="hand second-hand"></div>
+            </div>
+            <div id="timer">00:00</div>
+        </div>
+    </div>
+
+    <div id="input-container">
+        <input type="text" id="todo-input">
+        <button id="input-btn">追加</button>
+    </div>
+    <ol id="todo-list"></ol>
+
+
+
+</body>
+
+</html>
