@@ -19,6 +19,11 @@
     border-radius: 50%;
     border: 2px solid black;
     position: relative;
+    background-image: url('images/05DC0544-CFC5-4241-905F-215A5C0EF34C_1_105_c.jpeg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: contain;
 }
 
 .hand {
