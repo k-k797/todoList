@@ -2,10 +2,9 @@ const input = document.querySelector('#todo-input');
 const btn = document.querySelector('#input-btn');
 const list = document.querySelector('#todo-list');
 
-
-btn.addEventListener('click', () => {
+const addTodo = () => {
     const todoText = input.value;
-    if (todoText === '') return;
+    if (todoText.trim() === '') return;
     const listItem = document.createElement('li');
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
@@ -28,33 +27,11 @@ btn.addEventListener('click', () => {
     input.value = '';
 
 
-})
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') {
-        const todoText = input.value;
-        if (todoText === '') return;
-        const listItem = document.createElement('li');
-        const checkbox = document.createElement('input');
-        checkbox.type = 'checkbox';
-        let timeOutId = null;
-        const span = document.createElement('span');
-        span.textContent = todoText;
-        listItem.appendChild(checkbox);
-        listItem.appendChild(span);
-        list.appendChild(listItem);
+}
+btn.addEventListener('click', addTodo);
 
-        checkbox.addEventListener('change', () => {
-            if (checkbox.checked) {
-                timeOutId = setTimeout(() => {
-                    listItem.remove();
-                }, 1000)
-            } else {
-                clearTimeout(timeOutId);
-            }
-        })
-        input.value = '';
-
+input.addEventListener('keydown', (e) => {
+    if (e.key === "Enter" && !e.isComposing) {
+        addTodo();
     }
-
-});
-
+})

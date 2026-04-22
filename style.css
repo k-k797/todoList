@@ -49,3 +49,10 @@
     background-color: red;
     transform: translateX(-50%);
 }
+
+#todo-container {
+    width: 80%;
+    height: 50vh;
+    border: 1px solid black;
+    overflow-y: scroll;
+}
