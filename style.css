@@ -61,3 +61,7 @@
     border: 1px solid black;
     overflow-y: scroll;
 }
+
+#trashcan {
+    margin-top: 10px;
+}
